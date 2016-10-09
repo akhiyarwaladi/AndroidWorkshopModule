@@ -22,12 +22,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends Activity {
-    // json object response url
+    // json object response urlhaha
     private String urlJsonObj = "http://trashbinary.netai.net/person_object.json";
 
     // json array response url
     private String urlJsonArry = "http://trashbinary.netai.net/person_array.json";
-
     private static String TAG = MainActivity.class.getSimpleName();
     private Button btnMakeObjectRequest, btnMakeArrayRequest;
 
