@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText edtPanjang, edtLebar;
     private Button btnHitung;
     private TextView txtLuas;
-
+    //hahaha
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 double l = Double.parseDouble(lebar);
 
                 double luas = p * l;
-
                 txtLuas.setText("Luas : "+luas);
             }
         });
