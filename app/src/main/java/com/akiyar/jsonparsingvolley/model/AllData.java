@@ -6,16 +6,8 @@ package com.akiyar.jsonparsingvolley.model;
 import android.os.Parcel;
 import java.io.Serializable;
 
-/**
- * Created by erdearik on 7/23/16.
- */
 public class AllData implements Serializable {
-    String ph;
-    String suhu;
-    String doo;
-    String status;
-    String waktu;
-    String output;
+    String ph, suhu, doo, status, waktu, output;
 
     protected AllData(Parcel in) {
         ph = in.readString();

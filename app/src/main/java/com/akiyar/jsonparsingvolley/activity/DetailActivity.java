@@ -34,7 +34,6 @@ public class DetailActivity extends AppCompatActivity {
         allDatas.add(new AllData("8", "12", "6", "normal", "12 january 2017","87"));
         allDatas.add(new AllData("11", "35", "7", "normal", "12 january 2017","87"));
         allDatas.add(new AllData("12", "60", "14", "normal", "12 january 2017","87"));
-
         setupChart();
 
     }
@@ -45,9 +44,7 @@ public class DetailActivity extends AppCompatActivity {
         chartSuhu.setDescription("");
         chartPH.setDescription("");
         chartDO.setDescription("");
-
         updateChart();
-
     }
     private void updateChart(){
         ArrayList<Entry> entryPH = new ArrayList<>();
@@ -115,7 +112,5 @@ public class DetailActivity extends AppCompatActivity {
         chartDO.setData(dataDO);
         chartDO.notifyDataSetChanged();
         chartDO.animateY(1000);
-
-
     }
 }

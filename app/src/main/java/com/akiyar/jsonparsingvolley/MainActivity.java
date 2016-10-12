@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.akiyar.jsonparsingvolley.activity.DetailActivity;
+import com.akiyar.jsonparsingvolley.activity.TableActivity;
 import com.akiyar.jsonparsingvolley.app.AppController;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -29,7 +30,7 @@ public class MainActivity extends Activity {
     private String urlJsonArry = "http://trashbinary.netai.net/person_array.json";
 
     private static String TAG = MainActivity.class.getSimpleName();
-    private Button btnMakeObjectRequest, btnMakeArrayRequest, btnViewChart;
+    private Button btnMakeObjectRequest, btnMakeArrayRequest, btnViewChart, btnViewTable;
 
     private ProgressDialog pDialog;
     private TextView txtResponse;
@@ -46,6 +47,7 @@ public class MainActivity extends Activity {
         btnMakeArrayRequest = (Button) findViewById(R.id.btnArrayRequest);
         btnViewChart = (Button) findViewById(R.id.btnViewChart);
         txtResponse = (TextView) findViewById(R.id.txtResponse);
+        btnViewTable = (Button) findViewById(R.id.btnViewTable);
 
         pDialog = new ProgressDialog(this);
         pDialog.setMessage("Please wait...");
@@ -72,6 +74,14 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnViewTable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TableActivity.class);
                 startActivity(intent);
             }
         });
