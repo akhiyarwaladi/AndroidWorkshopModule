@@ -23,6 +23,17 @@
         android:text="Make JSON Array Request"
         android:layout_below="@id/btnObjRequest" />
 
+    <Button
+        android:id="@+id/btnViewChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="View Chart"
+        android:layout_below="@id/btnArrayRequest" />
+
     <TextView
         android:id="@+id/txtResponse"
         android:layout_width="fill_parent"

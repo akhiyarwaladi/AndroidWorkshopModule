@@ -2,6 +2,7 @@ package com.akiyar.jsonparsingvolley;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akiyar.jsonparsingvolley.activity.DetailActivity;
 import com.akiyar.jsonparsingvolley.app.AppController;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -27,7 +29,7 @@ public class MainActivity extends Activity {
     private String urlJsonArry = "http://trashbinary.netai.net/person_array.json";
 
     private static String TAG = MainActivity.class.getSimpleName();
-    private Button btnMakeObjectRequest, btnMakeArrayRequest;
+    private Button btnMakeObjectRequest, btnMakeArrayRequest, btnViewChart;
 
     private ProgressDialog pDialog;
     private TextView txtResponse;
@@ -42,6 +44,7 @@ public class MainActivity extends Activity {
 
         btnMakeObjectRequest = (Button) findViewById(R.id.btnObjRequest);
         btnMakeArrayRequest = (Button) findViewById(R.id.btnArrayRequest);
+        btnViewChart = (Button) findViewById(R.id.btnViewChart);
         txtResponse = (TextView) findViewById(R.id.txtResponse);
 
         pDialog = new ProgressDialog(this);
@@ -63,6 +66,13 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // making json array request
                 makeJsonArrayRequest();
+            }
+        });
+        btnViewChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                startActivity(intent);
             }
         });
 
