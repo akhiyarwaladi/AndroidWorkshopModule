@@ -22,7 +22,7 @@
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
         android:textSize="@dimen/title"
-        android:textStyle="bold" />
+        android:textColor="@color/genre"/>
 
     <!-- Rating -->
     <TextView
@@ -32,7 +32,8 @@
         android:layout_below="@id/nilai"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"
-        android:textSize="@dimen/rating" />
+        android:textSize="@dimen/rating"
+        android:textColor="@color/genre"/>
 
     <!-- Genre -->
     <TextView
