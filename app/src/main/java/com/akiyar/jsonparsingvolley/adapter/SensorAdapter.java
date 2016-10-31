@@ -18,11 +18,13 @@ public class SensorAdapter extends RecyclerView.Adapter<SensorAdapter.ViewHolder
     private List<AllData> sensorList;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView no, nilai, waktu;
+        public TextView no, nilai,nilai2,nilai3, waktu;
         public ViewHolder(View view) {
             super(view);
-            no = (TextView) view.findViewById(R.id.no);
+            //no = (TextView) view.findViewById(R.id.no);
             nilai = (TextView) view.findViewById(R.id.nilai);
+            nilai2 = (TextView) view.findViewById(R.id.nilai2);
+            nilai3 = (TextView) view.findViewById(R.id.nilai3);
             waktu = (TextView) view.findViewById(R.id.waktu);
         }
     }
@@ -42,8 +44,10 @@ public class SensorAdapter extends RecyclerView.Adapter<SensorAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         AllData allData = sensorList.get(position);
-        holder.no.setText(String.valueOf(position+1));
+        //holder.no.setText(String.valueOf(position+1));
         holder.nilai.setText(allData.getPh());
+        holder.nilai2.setText(allData.getSuhu());
+        holder.nilai3.setText(allData.getDoo());
         holder.waktu.setText(allData.getWaktu());
     }
 

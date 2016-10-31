@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:focusable="true"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
-    android:clickable="true"
-    android:background="?android:attr/selectableItemBackground"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="@drawable/list_row_selector"
+    android:padding="8dp" >
 
-    <ImageView
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/note"
-        android:id="@+id/gambar"
-        android:paddingBottom="11dp"
-        android:paddingTop="11dp"
-        android:layout_alignParentLeft="true"/>
-
-    <TextView
-        android:id="@+id/no"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
+    <!-- Thumbnail Image -->
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentLeft="true"
-        android:paddingLeft="35dp"
-        android:paddingTop="11dp"
-        android:paddingBottom="11dp"
-        android:text="haha"
-        android:gravity="center"/>
+        android:background="@drawable/note"
+        android:layout_marginRight="8dp" />
 
+    <!-- Movie Title -->
     <TextView
         android:id="@+id/nilai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
-        android:layout_centerInParent="true"
-        android:paddingTop="11dp"
-        android:paddingBottom="11dp"
-        android:text="haha"
-        android:gravity="center"
-        android:textStyle="bold"/>
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
 
+    <!-- Rating -->
+    <TextView
+        android:id="@+id/nilai2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nilai"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="@dimen/rating" />
+
+    <!-- Genre -->
+    <TextView
+        android:id="@+id/nilai3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nilai2"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textColor="@color/genre"
+        android:textSize="@dimen/genre" />
+
+    <!-- Release Year -->
     <TextView
         android:id="@+id/waktu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="11dp"
-        android:paddingBottom="11dp"
-        android:textSize="12sp"
-        android:text="24 januari"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/year"
+        android:textSize="@dimen/year" />
 
 </RelativeLayout>
